@@ -39,7 +39,7 @@ grains:
       source:        
         path: github.com/QualiSystemsLab/terraform-modules.git//rds
       host:
-        name: eks-dmo-useast1-alexaz
+        name: eksgmp
       inputs:
         - sandbox_id: '{{ sandboxid | downcase }}'
         - size: '{{ .inputs.size }}' 
@@ -61,7 +61,7 @@ grains:
       source:
         path: https://github.com/QualiSystemsLab/Torque-Project-Pivot.git//robotShop
       host:
-        name: eks-dmo-useast1-alexaz
+        name: eksgmp
       # commands:
       #   - "dep up xxx"
 
@@ -69,5 +69,4 @@ grains:
         - hostname: 'robotshop-{{ sandboxid | downcase }}'
         - version: '{{ .inputs.version }}'
         - connectionString: '{{ .grains.mySqlDB.outputs.connection_string }}'
-        - objectStore.s3BucketArn: '{{ .grains.s3Bucket.outputs.s3_bucket_arn }}'
         - redis.storageClassName: gp2        
