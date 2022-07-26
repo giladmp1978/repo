@@ -37,7 +37,8 @@ grains:
     kind: terraform
     spec:
       source:        
-        path: github.com/QualiSystemsLab/terraform-modules.git//rds--todo terraform file
+        # path: github.com/QualiSystemsLab/terraform-modules.git//rds
+        path: github.com/gilad030609/repo/tree/main/terraforms/getDate
       host:
         name: eksgmp
       inputs:
