@@ -1,18 +1,18 @@
 # comment
 variable "nameChiled1" {
-    description = "Name of S3 bucket"
+    description = "Name of S3 bucket  edited to test autoupdate"
     type = string
     default = "Child-One"
 }
 
 variable "region" {
-    description = "Region where to create resources" 
+    description = "Region where to create resources edited to test autoupdate" 
     type = string
     default = "eu-west-1"
 }
 
 variable "acl" {
-    description = "Canned ACL to apply to the bucket. Default is private."
+    description = "Canned ACL to apply to the bucket. Default is private. edited to test autoupdate"
     type = string
     default = "private"
 
@@ -23,6 +23,6 @@ variable "acl" {
 }
 
 variable "user" {
-    description = "Username to assign permissions for S3 bucket to. If left blank, will not create permissions."
+    description = "Username to assign permissions for S3 bucket to. If left blank, will not create permissions. edited to test autoupdate"
     default = "none"
 }
