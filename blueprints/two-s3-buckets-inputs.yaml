@@ -27,7 +27,7 @@ grains:
       source:
         path: https://github.com/gilad030609/repo/tree/main/blueprints/s3bp1
       host:
-        name: eksgmp edited to test autoupdate
+        name: eksgmp
       inputs:
         - region: us-west-1
         - acl: private
