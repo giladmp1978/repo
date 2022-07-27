@@ -34,7 +34,7 @@ resource "aws_iam_policy" "policy" {
   count = "${var.user == "none" ? 0 : 1}"
   name        = "s3_access_${var.nameChiled1}"
   path        = "/"
-  description = "Policy to access S3 Module"
+  description = "Policy to access S3 Module edited to test autoupdate"
   # one more comment here
 
   # Terraform expression result to valid JSON syntax.
