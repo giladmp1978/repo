@@ -6,12 +6,12 @@ inputs:
     type: string
     display-style: normal
     default: "Bucket1_Name"
-    description: "invalid name for bucket"
+    description: "invalid name for bucket edited to test autoupdate"
   bucket_2_name:
     type: string
     display-style: normal
     default: "Bucket2_Name"
-    description: "invalid name for bucket 2"
+    description: "invalid name for bucket 2 edited to test autoupdate"
 
 outputs:
   bucket_1:
@@ -27,7 +27,7 @@ grains:
       source:
         path: https://github.com/gilad030609/repo/tree/main/blueprints/s3bp1
       host:
-        name: eksgmp
+        name: eksgmp edited to test autoupdate
       inputs:
         - region: us-west-1
         - acl: private
