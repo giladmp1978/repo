@@ -2,19 +2,19 @@
 variable "nameChiled1" {
     description = "Name of S3 bucket  edited to test autoupdate"
     type = string
-    default = "Child-One"
+    default = "Child-One-new"
 }
 
 variable "region" {
     description = "Region where to create resources edited to test autoupdate" 
     type = string
-    default = "eu-west-1"
+    default = "eu-west-1-new"
 }
 
 variable "acl" {
     description = "Canned ACL to apply to the bucket. Default is private. edited to test autoupdate"
     type = string
-    default = "private"
+    default = "private-new"
 
     validation {
         condition = contains(["private", "public-read", "public-read-write", "aws-exec-read", "authenticated-read", "log-delivery-write"], var.acl)
@@ -24,5 +24,5 @@ variable "acl" {
 
 variable "user" {
     description = "Username to assign permissions for S3 bucket to. If left blank, will not create permissions. edited to test autoupdate"
-    default = "none"
+    default = "none-new"
 }
