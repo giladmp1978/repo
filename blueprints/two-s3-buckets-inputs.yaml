@@ -31,7 +31,7 @@ grains:
       inputs:
         - region: us-west-1
         - acl: private
-        - name: {{.inputs.bucket_1_name}}
+        - name: '{{.inputs.bucket_1_name}}'
       outputs:
         - s3_bucket_arn
 
@@ -45,6 +45,6 @@ grains:
       inputs:
         - region: us-east-1
         - acl: private
-        - name: {{.inputs.bucket_2_name}}
+        - name: '{{.inputs.bucket_2_name}}'
       outputs:
         - s3_bucket_arn
