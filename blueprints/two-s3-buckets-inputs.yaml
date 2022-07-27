@@ -36,7 +36,7 @@ grains:
         - s3_bucket_arn
 
   bucket_2:
-    kind: terraform
+    kind: blueprint
     spec: 
       source:
         path: https://github.com/gilad030609/repo/tree/main/blueprints/s3bp2
