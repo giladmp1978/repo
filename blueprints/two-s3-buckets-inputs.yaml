@@ -1,0 +1,50 @@
+spec_version: 2
+description: Simple s3 buckets provisioning
+
+inputs:
+  bucket_1_name:
+    type: string
+    display-style: normal
+    default: "Bucket1_Name"
+    description: "invalid name for bucket"
+  bucket_2_name:
+    type: string
+    display-style: normal
+    default: "Bucket2_Name"
+    description: "invalid name for bucket 2"
+
+outputs:
+  bucket_1:
+    value: '{{ .grains.bucket_1.outputs.s3_bucket_arn }}'
+  bucket_2:
+    value: '{{ .grains.bucket_2.outputs.s3_bucket_arn }}'
+
+
+grains:
+  bucket_1:
+    kind: blueprint
+    spec: 
+      source:
+        path: https://github.com/gilad030609/repo/tree/main/blueprints/s3bp1
+      host:
+        name: eksgmp
+      inputs:
+        - region: us-west-1
+        - acl: private
+        - name: {{.inputs.bucket_1_name}}
+      outputs:
+        - s3_bucket_arn
+
+  bucket_2:
+    kind: terraform
+    spec: 
+      source:
+        path: https://github.com/gilad030609/repo/tree/main/blueprints/s3bp2
+      host:
+        name: eksgmp
+      inputs:
+        - region: us-east-1
+        - acl: private
+        - name: {{.inputs.bucket_2_name}}
+      outputs:
+        - s3_bucket_arn
