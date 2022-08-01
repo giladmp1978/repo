@@ -25,7 +25,8 @@ grains:
     kind: blueprint
     spec: 
       source:
-        path: https://github.com/gilad030609/repo/tree/main/blueprints/s3bp1
+        store: repo
+        path: blueprints/s3bp1
       host:
         name: eksgmp
       inputs:
@@ -39,7 +40,8 @@ grains:
     kind: blueprint
     spec: 
       source:
-        path: https://github.com/gilad030609/repo/tree/main/blueprints/s3bp2
+        store: repo
+        path: blueprints/s3bp2
       host:
         name: eksgmp
       inputs:
