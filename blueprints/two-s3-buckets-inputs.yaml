@@ -21,12 +21,12 @@ outputs:
 
 
 grains:
-  bucket_1:
+  s3bp1:
     kind: blueprint
     spec: 
       source:
         store: repo
-        path: blueprints/s3bp1
+        path: blueprints
       host:
         name: eksgmp
       inputs:
@@ -36,12 +36,12 @@ grains:
       outputs:
         - s3_bucket_arn
 
-  bucket_2:
+  s3bp2:
     kind: blueprint
     spec: 
       source:
         store: repo
-        path: blueprints/s3bp2
+        path: blueprints
       host:
         name: eksgmp
       inputs:
