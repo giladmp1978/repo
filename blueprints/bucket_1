@@ -24,6 +24,6 @@ grains:
       inputs:
         - region: us-west-1
         - acl: private
-        - name: 'demo-s3-bucket-1-{{ sandboxid | downcase }}'
+        - name: '{{.inputs.bucket_1_name}}'
       outputs:
         - s3_bucket_arn
