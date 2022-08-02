@@ -12,6 +12,12 @@ inputs:
     display-style: normal
     default: "Bucket2_Name"
     description: "invalid name for bucket 2 edited to test autoupdate"
+  host_name:
+    type: string
+    display-style: normal
+    default: "eks"
+    description: "execution host name"
+    
 
 outputs:
   bucket_1:
@@ -28,7 +34,7 @@ grains:
         store: repo
         path: blueprints
       host:
-        name: eksgmp
+        name: '{{.inputs.host_name}}'
       inputs:
         - region: us-west-1
         - acl: private
@@ -43,7 +49,7 @@ grains:
         store: repo
         path: blueprints
       host:
-        name: eksgmp
+        name: '{{.inputs.host_name}}'
       inputs:
         - region: us-east-1
         - acl: private
