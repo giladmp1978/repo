@@ -21,7 +21,7 @@ outputs:
 
 
 grains:
-  s3bp1:
+  bucket_1:
     kind: blueprint
     spec: 
       source:
@@ -36,7 +36,7 @@ grains:
       outputs:
         - s3_bucket_arn
 
-  s3bp2:
+  bucket_2:
     kind: blueprint
     spec: 
       source:
