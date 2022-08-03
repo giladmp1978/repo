@@ -33,4 +33,4 @@ grains:
         - bucket_1_name: '{{.inputs.bucket_1_name}}'
         - host_name: '{{.inputs.host_name}}'
       outputs:
-        - s3_bucket_arn
+        - bucket_1
