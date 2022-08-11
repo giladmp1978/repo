@@ -5,7 +5,7 @@ inputs:
   bucket_1_name:
     type: string
     display-style: normal
-    default: "Bucket1_Name"
+    default: "Bucket1_Deafult_Name"
     description: "invalid name for bucket edited to test autoupdate"
   host_name:
     type: string
