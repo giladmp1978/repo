@@ -38,6 +38,7 @@ grains:
       inputs:
         - region: us-west-1
         - acl: private
+        - host_name: '{{.inputs.host_name}}'
         - bucket_1_name: '{{.inputs.bucket_1_name}}'
       outputs:
         - bucket_1
@@ -53,6 +54,7 @@ grains:
       inputs:
         - region: us-east-1
         - acl: private
+        - host_name: '{{.inputs.host_name}}'
         - bucket_2_name: '{{.inputs.bucket_2_name}}'
       outputs:
         - bucket_2
