@@ -2,7 +2,7 @@ spec_version: 2
 description: Simple s3 buckets provisioning
 
 inputs:
-  loopit_name:
+  twoGrains_name:
     type: string
     display-style: normal
     default: "Bucket1_Name"
@@ -16,10 +16,10 @@ inputs:
 
 outputs:
   loopit:
-    value: '{{ .grains.loopit.outputs.loopit }}'
+    value: '{{ .grains.twoGrains.outputs.twoGrains }}'
   
 grains:
-  loopit:
+  twoGrains:
     kind: blueprint
     spec: 
       source:
@@ -30,8 +30,8 @@ grains:
       inputs:
         - region: us-west-1
         - acl: private
-        - loopit_name: '{{.inputs.loopit_name}}'
+        - twoGrains_name: '{{.inputs.twoGrains_name}}'
         - host_name: '{{.inputs.host_name}}'
       outputs:
-        - loopit.bucket_1
-        - loopit.bucket_2
+        - twoGrains.bucket_1
+        - twoGrains.bucket_2
