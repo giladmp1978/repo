@@ -10,7 +10,7 @@ inputs:
   host_name:
     type: string
     display-style: normal
-    default: "eks"
+    default: ""
     description: "execution host name"
 
 outputs:
