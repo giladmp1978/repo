@@ -5,17 +5,17 @@ inputs:
   bucket_2_name:
     type: string
     display-style: normal
-    default: "Bucket1_Name"
+    default: "Bucket2_Name"
     description: "invalid name for bucket edited to test autoupdate"
   host_name:
     type: string
     display-style: normal
-    default: "eks"
+    default: ""
     description: "execution host name"
 
 outputs:
   bucket_2:
-    value: '{{ .grains.bucket_1.outputs.s3_bucket_arn }}'
+    value: '{{ .grains.bucket_2.outputs.s3_bucket_arn }}'
 
 
 grains:
