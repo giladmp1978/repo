@@ -27,7 +27,7 @@ outputs:
 
 grains:
   loopGrain:
-  kind: blueprint
+    kind: blueprint
     spec: 
       source:
         store: repo
