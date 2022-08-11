@@ -6,16 +6,16 @@ inputs:
     type: string
     display-style: normal
     default: "Bucket1_Name_from_parent"
-    description: "invalid name for bucket edited to test autoupdate"
+    description: "invalid name for first bucket edited to test autoupdate"
   bucket_2_name:
     type: string
     display-style: normal
     default: "Bucket2_Name_from_parent"
-    description: "invalid name for bucket 2 edited to test autoupdate"
+    description: "invalid name for second bucket edited to test autoupdate"
   host_name:
     type: string
     display-style: normal
-    default: "host_name_from_parent"
+    default: "eks_from_parent"
     description: "execution host name"
     
 
@@ -24,7 +24,7 @@ outputs:
     value: '{{ .grains.bucket_1.outputs.bucket_1 }}'
   bucket_2:
     value: '{{ .grains.bucket_2.outputs.bucket_2 }}'
-
+    
 
 grains:
   bucket_1:
@@ -38,8 +38,9 @@ grains:
       inputs:
         - region: us-west-1
         - acl: private
-        - host_name: '{{.inputs.host_name}}'
         - bucket_1_name: '{{.inputs.bucket_1_name}}'
+        - host_name: '{{.inputs.host_name}}'
+                                                    
       outputs:
         - bucket_1
 
@@ -52,9 +53,10 @@ grains:
       host:
         name: '{{.inputs.host_name}}'
       inputs:
-        - region: us-east-1
+        - region: us-west-1
         - acl: private
-        - host_name: '{{.inputs.host_name}}'
         - bucket_2_name: '{{.inputs.bucket_2_name}}'
+        - host_name: '{{.inputs.host_name}}'
+                                                    
       outputs:
         - bucket_2
