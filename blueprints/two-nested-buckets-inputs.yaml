@@ -5,17 +5,17 @@ inputs:
   bucket_1_name:
     type: string
     display-style: normal
-    default: "Bucket1_Name"
+    default: "Bucket1_Name_from_parent"
     description: "invalid name for bucket edited to test autoupdate"
   bucket_2_name:
     type: string
     display-style: normal
-    default: "Bucket2_Name"
+    default: "Bucket2_Name_from_parent"
     description: "invalid name for bucket 2 edited to test autoupdate"
   host_name:
     type: string
     display-style: normal
-    default: "dune"
+    default: "host_name_from_parent"
     description: "execution host name"
     
 
