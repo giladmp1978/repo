@@ -15,15 +15,15 @@ inputs:
   host_name:
     type: string
     display-style: normal
-    default: "eks"
+    default: ""
     description: "execution host name"
     
 
 outputs:
   bucket_1:
-    value: '{{ .grains.bucket_1.outputs.s3_bucket_arn }}'
+    value: '{{ .grains.bucket_1.outputs.bucket_1 }}'
   bucket_2:
-    value: '{{ .grains.bucket_2.outputs.s3_bucket_arn }}'
+    value: '{{ .grains.bucket_2.outputs.bucket_2 }}'
 
 
 grains:
@@ -38,9 +38,9 @@ grains:
       inputs:
         - region: us-west-1
         - acl: private
-        - name: '{{.inputs.bucket_1_name}}'
+        - bucket_1_name: '{{.inputs.bucket_1_name}}'
       outputs:
-        - s3_bucket_arn
+        - bucket_1
 
   bucket_2:
     kind: blueprint
@@ -53,6 +53,6 @@ grains:
       inputs:
         - region: us-east-1
         - acl: private
-        - name: '{{.inputs.bucket_2_name}}'
+        - bucket_2_name: '{{.inputs.bucket_2_name}}'
       outputs:
-        - s3_bucket_arn
+        - bucket_2
