@@ -15,7 +15,7 @@ inputs:
   host_name:
     type: string
     display-style: normal
-    default: ""
+    default: "dune"
     description: "execution host name"
     
 
