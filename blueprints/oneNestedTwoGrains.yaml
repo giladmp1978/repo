@@ -15,8 +15,10 @@ inputs:
     
 
 outputs:
-  twoGrains:
-    value: '{{ .grains.twoGrains.outputs.twoGrains }}'
+  twoGrains1:
+    value: '{{ .grains.twoGrains.outputs.bucket_1 }}'
+  twoGrains2:
+    value: '{{ .grains.twoGrains.outputs.bucket_2 }}'
     
 grains:
   twoGrains:
@@ -33,5 +35,5 @@ grains:
         - twoGrains_name: '{{.inputs.twoGrains_name}}'
         - host_name: '{{.inputs.host_name}}'
       outputs:
-        - twoGrains.bucket_1
-        - twoGrains.bucket_2
+        - bucket_1
+        - bucket_2
