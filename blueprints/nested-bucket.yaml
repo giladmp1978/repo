@@ -16,7 +16,7 @@ inputs:
 
 outputs:
   bucket_1:
-    value: '{{ .grains.bucket_1.outputs.s3_bucket_arn }}'
+    value: '{{ .grains.bucket_1.outputs.bucket_1 }}'
   
 grains:
   bucket_1:
