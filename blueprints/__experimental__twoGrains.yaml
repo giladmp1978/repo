@@ -5,12 +5,12 @@ inputs:
   bucket_1_name:
     type: string
     display-style: normal
-    default: "Bucket1_Deafult_Name"
+    default: "Bucket1-Deafult-Name"
     description: "invalid name for bucket edited to test autoupdate"
   bucket_2_name:
     type: string
     display-style: normal
-    default: "Bucket2_Deafult_Name"
+    default: "Bucket2-Deafult-Name"
     description: "invalid name for bucket edited to test autoupdate"
   host_name:
     type: execution-host
