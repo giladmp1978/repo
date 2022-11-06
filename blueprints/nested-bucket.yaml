@@ -8,9 +8,7 @@ inputs:
     default: "Bucket1_Name_from_parent"
     description: "invalid name for bucket edited to test autoupdate"
   host_name:
-    type: string
-    display-style: normal
-    default: "eks_from_parent"
+    type: execution-host
     description: "execution host name"
     
 
