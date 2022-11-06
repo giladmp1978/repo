@@ -13,9 +13,7 @@ inputs:
     default: "Bucket2_Deafult_Name"
     description: "invalid name for bucket edited to test autoupdate"
   host_name:
-    type: string
-    display-style: normal
-    default: "space"
+    type: execution-host
     description: "execution host name"
 
 outputs:
