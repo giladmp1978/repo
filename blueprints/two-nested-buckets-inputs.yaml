@@ -13,7 +13,7 @@ inputs:
     default: "Bucket2_Name_from_parent"
     description: "invalid name for second bucket edited to test autoupdate"
   host_name:
-    type: string
+    type: execution-host
     display-style: normal
     default: "eks_from_parent"
     description: "execution host name"
